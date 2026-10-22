@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maria's Bakery | Bread, croissants and cakes</title>
+  <meta name="description" content="Visit Maria's Bakery on Larch Street for small-batch bread, croissants, and cakes.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Integrated on Evan's behalf at Mahbub's request. Codex-led integration.
+       Sources: inputs/client_transcript.md, flyer.png, logo.png, photos/.
+       Transcript hours, phone, and sourdough price are provisional demo choices.
+       See questions_for_maria.md before publishing. Original role files unchanged. -->
+  <a href="#main-content">Skip to main content</a>
+
+  <header id="top" class="site-header">
+    <p class="brand"><a href="#hero">Maria's Bakery</a></p>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#hours">Hours</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <aside class="demo-notice" aria-label="Demo information">
+    <p>Classroom demo: hours, sourdough price, and phone number use Maria's voice note and await confirmation. Images are supplied illustrations.</p>
+  </aside>
+  <main id="main-content" tabindex="-1">
+    <section id="hero" class="hero" aria-labelledby="hero-heading">
+      <h1 id="hero-heading">Fresh bread, warm croissants, and a friendly hello.</h1>
+      <p>Welcome to Maria's Bakery on Larch Street. Stop in for breakfast, a loaf for home, or a little chat.</p>
+      <p><a class="btn-call" href="tel:+12165550148">Call us: 216-555-0148</a></p>
+      <p><a href="#menu">Explore what we bake</a></p>
+      <img src="images/01_sourdough.png"
+           alt="Illustration of a sourdough loaf with a scored crust"
+           width="640" height="440" fetchpriority="high">
+    </section>
+
+    <section id="menu" aria-labelledby="menu-heading">
+      <h2 id="menu-heading">What we bake</h2>
+      <p>We bake in small batches. When something sells out, it may be gone until tomorrow.</p>
+      <article class="menu-item" aria-labelledby="sourdough-heading">
+        <h3 id="sourdough-heading">Sourdough loaf</h3>
+        <img src="images/01_sourdough.png"
+             alt="Illustration of a sourdough loaf"
+             width="640" height="440" loading="lazy">
+        <!-- Transcript: $8 per loaf. Flyer: $9. Awaiting confirmation. -->
+        <p class="menu-price">$8 per loaf</p>
+        <p>Our crackly-crust sourdough.</p>
+      </article>
+      <article class="menu-item" aria-labelledby="croissant-heading">
+        <h3 id="croissant-heading">Croissants</h3>
+        <img src="images/02_croissants.png"
+             alt="Illustration of three croissants"
+             width="640" height="440" loading="lazy">
+        <p class="menu-price">$4 each</p>
+      </article>
+      <article class="menu-item" aria-labelledby="cake-heading">
+        <h3 id="cake-heading">Celebration cakes</h3>
+        <img src="images/03_cake.png"
+             alt="Illustration of a round celebration cake"
+             width="640" height="440" loading="lazy">
+        <p class="menu-price">From $35</p>
+        <p>Prices depend on size and what you would like. Call to discuss your cake.</p>
+      </article>
+    </section>
+
+    <section id="hours" aria-labelledby="hours-heading">
+      <h2 id="hours-heading">When to visit</h2>
+      <p id="hours-note">Demo hours follow Maria's voice note and await confirmation.</p>
+      <!-- Transcript: closed Monday, 7 AM to 5 PM other days.
+           Flyer: open seven days, 7 AM to 6 PM. -->
+      <table class="hours-table" aria-describedby="hours-note">
+        <caption>Opening hours (provisional)</caption>
+        <thead>
+          <tr><th scope="col">Day</th><th scope="col">Hours</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Monday</th><td>Closed</td></tr>
+          <tr><th scope="row">Tuesday to Sunday</th><td><time datetime="07:00">7 AM</time> to <time datetime="17:00">5 PM</time></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">A little about us</h2>
+      <p>Maria's Bakery is a small neighborhood shop where you can stop in, say hello, and pick up something baked in small batches.</p>
+      <img src="images/04_counter.png"
+           alt="Illustration of a bakery display counter with bread"
+           width="640" height="440" loading="lazy">
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Come say hello</h2>
+      <address>Maria's Bakery<br>412 Larch Street</address>
+      <img src="images/05_storefront.png"
+           alt="Illustration of a storefront with a Maria's Bakery sign"
+           width="640" height="440" loading="lazy">
+      <p><a class="btn-call" href="tel:+12165550148">Call us: 216-555-0148</a></p>
+      <p class="contact-note">Demo number from Maria's voice note; confirmation is pending.</p>
+      <p>If we don't answer right away, our hands may be covered in flour. Please try again.</p>
+      <p>Please call to discuss cakes. Online ordering and payment are not available on this demo.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Maria's Bakery</p>
+    <p><a href="#top">Back to top</a></p>
+  </footer>
+</body>
+</html>

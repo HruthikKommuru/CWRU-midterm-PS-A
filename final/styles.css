@@ -1,0 +1,388 @@
+/* Maria's Bakery | Jerry Cai | UI/UX Designer
+   Evidence: inputs/client_transcript.md requests a warm, welcoming one-page
+   site, readable phone text, a prominent call button, and food-led photography.
+   inputs/flyer.png supports cream and brown as a visual direction only.
+   Its hours, phone number and bread price conflict with the transcript;
+   the analyst/copywriter must resolve those facts, not this stylesheet.
+   inputs/logo.png is pink although the client dislikes pink. Ask Maria
+   about an approved alternate logo; preserve the supplied image meanwhile.
+
+   Handoff: use the IDs/classes in shared/page_structure.md. Place each
+   .menu-item directly inside #menu for the wide-screen card layout.
+   Apply .btn-call to a real <a href="tel:..."> using the confirmed number.
+   Use semantic headings, image alt text, and table headers in the HTML.
+   CSS supplies appearance only; ordering/payment needs separate scoping.
+   No remote fonts, generated factual text, or image recoloring are used. */
+
+:root {
+  color-scheme: light;
+  font-size: 100%;
+  --page: #fff8ec;
+  --surface: #ffffff;
+  --warm-surface: #f3e6d3;
+  --ink: #35251d;
+  --muted: #665044;
+  --accent: #82401f;
+  --accent-hover: #603018;
+  --line: #d4bda5;
+  --focus: #145a70;
+  --radius: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 1rem;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.18;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 6vw, 4rem);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+h3 {
+  font-size: 1.375rem;
+}
+
+p,
+ul,
+ol,
+figure {
+  margin: 0 0 1.25rem;
+}
+
+p {
+  max-width: 65ch;
+}
+
+small,
+figcaption,
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  color: var(--muted);
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 0.22em;
+  text-decoration-thickness: 0.1em;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 4px;
+}
+
+#top,
+#hero,
+#menu,
+#hours,
+#about,
+#contact,
+.site-footer {
+  width: min(100% - 2rem, 70rem);
+  min-width: 0;
+  margin-inline: auto;
+}
+
+#top,
+#hero,
+#menu,
+#hours,
+#about,
+#contact {
+  scroll-margin-top: 1.5rem;
+}
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1.25rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header > a {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.375rem;
+  font-weight: 700;
+}
+
+.site-header img {
+  width: 4.5rem;
+  height: auto;
+}
+
+.site-header nav,
+.site-header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 0.75rem;
+}
+
+.site-header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-header a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.5rem 0.25rem;
+}
+
+#hero,
+#menu,
+#hours,
+#about,
+#contact {
+  padding-block: clamp(2rem, 5vw, 4rem);
+}
+
+.hero {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.hero > img,
+.hero > figure {
+  width: 100%;
+  max-width: 48rem;
+  margin-top: 1rem;
+}
+
+.hero > img,
+.hero > figure img {
+  width: 100%;
+  height: auto;
+}
+
+.hero .btn-call {
+  justify-self: start;
+}
+
+#menu {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.25rem;
+}
+
+#menu > :not(.menu-item) {
+  grid-column: 1 / -1;
+}
+
+.menu-item {
+  min-width: 0;
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.menu-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  margin-bottom: 1.25rem;
+  object-fit: cover;
+}
+
+.menu-item > :last-child {
+  margin-bottom: 0;
+}
+
+.menu-price {
+  color: var(--accent);
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+#hours,
+#about {
+  border-top: 1px solid var(--line);
+}
+
+.hours-table {
+  width: 100%;
+  max-width: 40rem;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 1rem;
+}
+
+.hours-table caption {
+  padding-bottom: 0.75rem;
+  text-align: left;
+  font-weight: 700;
+}
+
+.hours-table th,
+.hours-table td {
+  padding: 0.875rem 0.5rem;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.hours-table th {
+  font-weight: 700;
+}
+
+#about img {
+  width: 100%;
+  max-width: 40rem;
+  margin-top: 1.5rem;
+}
+
+#contact {
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--warm-surface);
+}
+
+#contact address {
+  margin-bottom: 1.25rem;
+  font-style: normal;
+}
+
+.btn-call,
+.site-header .btn-call {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-width: 44px;
+  min-height: 48px;
+  max-width: 100%;
+  padding: 0.875rem 1.5rem;
+  border: 2px solid var(--accent);
+  border-radius: 0.5rem;
+  background: var(--accent);
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-call:hover,
+.site-header .btn-call:hover {
+  border-color: var(--accent-hover);
+  background: var(--accent-hover);
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.site-footer {
+  margin-top: 2rem;
+  padding-block: 1.5rem 2rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+}
+
+@media (min-width: 48rem) {
+  #menu {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .menu-item {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .hero .btn-call,
+  #contact .btn-call {
+    width: 100%;
+  }
+}
+
+@media (forced-colors: active) {
+  .btn-call,
+  .site-header .btn-call {
+    border-color: ButtonText;
+  }
+
+  :focus-visible {
+    outline-color: Highlight;
+  }
+}
+
+/* Final integration: access links and clearly labeled demo assumptions. */
+body > a[href="#main-content"] {
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  transform: translateY(-150%);
+  padding: 0.75rem 1rem;
+  background: var(--surface);
+  z-index: 10;
+}
+body > a[href="#main-content"]:focus { transform: translateY(0); }
+.brand { margin: 0; font-size: 1.375rem; font-weight: 700; }
+.demo-notice {
+  width: min(100% - 2rem, 70rem);
+  margin: 1rem auto 0;
+  padding: 1rem;
+  border-left: 4px solid var(--accent);
+  background: var(--warm-surface);
+}
+.demo-notice p { max-width: none; margin: 0; }
+#contact img { max-width: 40rem; margin-block: 1.25rem; }
+.contact-note { color: var(--muted); }
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}

@@ -3,12 +3,116 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Maria's Bakery — page draft</title>
+  <title>Maria's Bakery - page draft</title>
   <link rel="stylesheet" href="../03_ui_ux_designer/styles.css">
 </head>
 <body>
-  <!-- Build #top, #hero, #menu, #hours, #about, #contact and the shared classes.
-       Use temporary text. The leader swaps in the final copy.
-       Add images from inputs/ with useful alt text. -->
+  <!-- Developer handoff: all wording is temporary until the copywriter's handoff.
+       Sources: inputs/client_transcript.md, inputs/flyer.png, inputs/logo.png,
+       and inputs/photos/. Follow shared/page_structure.md for styling hooks.
+       The transcript and flyer disagree on days, closing time, sourdough price,
+       and phone number. Do not publish those details without a team decision.
+       Logo placement is pending because the supplied logo is pink and Maria
+       dislikes pink. Ordering and payment require further client decisions.
+       Supplied pictures are illustrated placeholders, not actual food photos.
+       Designer: add responsive image sizing, 16px+ text, 44px+ call buttons,
+       readable contrast, visible focus, and a narrow-screen layout in your CSS. -->
+  <a href="#main-content">Skip to main content</a>
+
+  <header id="top" class="site-header">
+    <p><a href="#hero">Maria's Bakery</a></p>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#hours">Hours</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section id="hero" class="hero" aria-labelledby="hero-heading">
+      <h1 id="hero-heading">Welcome to Maria's Bakery</h1>
+      <p>Bread, croissants, and cakes, baked in small batches.</p>
+      <p><a href="#menu">Explore what we bake</a></p>
+      <img src="../../inputs/photos/01_sourdough.png"
+           alt="Illustration of a sourdough loaf with a scored crust"
+           width="640" height="440" fetchpriority="high">
+    </section>
+
+    <section id="menu" aria-labelledby="menu-heading">
+      <h2 id="menu-heading">What we bake</h2>
+      <p>We bake in small batches. Items may sell out before closing.</p>
+      <article class="menu-item" aria-labelledby="sourdough-heading">
+        <h3 id="sourdough-heading">Sourdough loaf</h3>
+        <img src="../../inputs/photos/01_sourdough.png"
+             alt="Illustration of a sourdough loaf"
+             width="640" height="440" loading="lazy">
+        <!-- Transcript: $8 per loaf. Flyer: $9. Awaiting confirmation. -->
+        <p class="menu-price">Price awaiting confirmation</p>
+      </article>
+      <article class="menu-item" aria-labelledby="croissant-heading">
+        <h3 id="croissant-heading">Croissants</h3>
+        <img src="../../inputs/photos/02_croissants.png"
+             alt="Illustration of three croissants"
+             width="640" height="440" loading="lazy">
+        <p class="menu-price">$4 each</p>
+      </article>
+      <article class="menu-item" aria-labelledby="cake-heading">
+        <h3 id="cake-heading">Celebration cakes</h3>
+        <img src="../../inputs/photos/03_cake.png"
+             alt="Illustration of a round celebration cake"
+             width="640" height="440" loading="lazy">
+        <p class="menu-price">From $35</p>
+        <p>Prices depend on size and what you would like. Call to discuss your cake.</p>
+      </article>
+    </section>
+
+    <section id="hours" aria-labelledby="hours-heading">
+      <h2 id="hours-heading">When to visit</h2>
+      <p id="hours-note">Draft hours from Maria's voice note. The flyer lists different hours; confirmation is needed.</p>
+      <!-- Transcript: closed Monday, 7 AM to 5 PM other days.
+           Flyer: open seven days, 7 AM to 6 PM. -->
+      <table class="hours-table" aria-describedby="hours-note">
+        <caption>Provisional opening hours</caption>
+        <thead>
+          <tr><th scope="col">Day</th><th scope="col">Hours</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Monday</th><td>Closed</td></tr>
+          <tr><th scope="row">Tuesday to Sunday</th><td><time datetime="07:00">7 AM</time> to <time datetime="17:00">5 PM</time></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">A little about us</h2>
+      <p>A place to pick up breakfast, enjoy something baked in small batches, and stop for a little chat.</p>
+      <img src="../../inputs/photos/04_counter.png"
+           alt="Illustration of a bakery display counter with bread"
+           width="640" height="440" loading="lazy">
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Come say hello</h2>
+      <address>Maria's Bakery<br>412 Larch Street</address>
+      <img src="../../inputs/photos/05_storefront.png"
+           alt="Illustration of a storefront with a Maria's Bakery sign"
+           width="640" height="440" loading="lazy">
+      <!-- Transcript phone: 216-555-0148. Flyer phone: 216-555-0184.
+           After confirmation, replace this disabled button with
+           <a class="btn-call" href="tel:CONFIRMED_NUMBER">Call Maria's Bakery</a>.
+           Use the confirmed number in international format in the href. -->
+      <p id="phone-note">The phone number is awaiting confirmation.</p>
+      <button class="btn-call" type="button" disabled aria-describedby="phone-note">Call Maria's Bakery (pending confirmation)</button>
+      <p>If we miss your call, please try again. We may be busy baking.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Maria's Bakery</p>
+    <p><a href="#top">Back to top</a></p>
+  </footer>
 </body>
 </html>

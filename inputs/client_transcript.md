@@ -1,0 +1,15 @@
+# Voice note from Maria
+
+Hi, hello! It's Maria, from Maria's Bakery. Sorry if you hear the mixer in the background. I meant to write a proper email, but then the dough was ready and a customer came in, and here we are. My niece said you could help with a website. That would be lovely. People keep asking whether we're open, and I tell them to look at our window, which isn't much help when they're still at home, is it?
+
+I picture one simple page. Nothing where people have to hunt through lots of tabs. A nice welcome, a little about us, the things we bake, when to visit, and how to call. Most people will be looking on their phones, probably while walking over or sitting on the bus. Please make the words easy to read. My husband squints at tiny writing, and I don't want anybody struggling to find the phone button. A big button that actually calls us would be wonderful.
+
+We're at 412 Larch Street. The number I give customers is 216-555-0148. Sometimes I miss a call when my hands are covered in flour, so please tell people to try again if we don't answer straightaway. We open at seven in the morning and close at five in the afternoon. We are closed Mondays; that's when I do the shopping and catch up on things. The other days are busy, especially just before people go to work. I don't need a fancy map if the address is clear.
+
+The sourdough is eight dollars a loaf. That's the one with the crackly crust in the photo. Croissants are four dollars each, and cakes start at thirty-five dollars. Cake prices depend on the size and what somebody wants, so they really should call us about those. Don't promise every item is sitting there all day. We bake in small batches, and when something sells out, sometimes that's it until tomorrow. I'd like the menu to feel friendly, not like a restaurant with six pages of choices.
+
+Oh, and could people order online and pay with credit cards? That would save me answering the phone in the morning. I just want it to be easy: choose the bread or a cake, pay, and collect it. I haven't picked any payment company or ordering service. I don't know how that part works. Still, I really do want one simple page. Perhaps you can show me what you think and tell me what you need from me before we do anything complicated.
+
+For the look, something warm and welcoming. I hate pink. It reminds me of those very sweet party decorations, and that's not really the feeling here. I've sent the logo we use, though. My cousin made it and I put it on our bags. I also found a flyer in the drawer and took a picture of it for you. The photos are just a few things around the shop: bread, croissants, a cake, the counter, and the front. Use whichever ones help, but let the food be the star.
+
+We've always liked being the kind of place where you can stop in and have a little chat. I'd love that feeling to come through. Keep the story short, please; people want breakfast, not my whole life story! A welcoming headline, the useful details, and a way to call would make me happy. Thank you for sorting through all this. I'll look forward to seeing what the team comes up with.

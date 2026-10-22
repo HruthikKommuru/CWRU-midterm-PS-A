@@ -25,10 +25,12 @@ These instructions guide student sessions. Keep language simple.
    If a push is rejected, run `git pull --no-rebase`, then push again. Configure
    `git config pull.rebase false` before pulling so pulls never rebase.
    Never force-push. If any conflict appears, stop and tell the leader.
-6. Every session, after identifying the student, run `git fetch` and
-   `git branch -r --merged origin/main`. Report in one line how many distinct
-   role slugs have merged branches (out of 4); do not count origin/main or HEAD.
-   When all 4 are merged, tell the leader: "Everything is merged. Start final/."
+6. Every session, run `git fetch`. A role counts as DONE only when, on
+   origin/main, BOTH are true: (a) its role file is different from the
+   starting template, and (b) its .review/<role>_<firstname>.md file exists.
+   A pushed branch with no work does NOT count. Tell the student in one line,
+   e.g. '3 of 4 done. Waiting on: Business Analyst.' Only when all 4 are DONE,
+   tell the leader: 'Everything is merged. Start final/.'
    The leader creates `final/<firstname>` from updated main, works only in
    final/, then commits, pushes, and merges it back when the team agrees.
    Recognize a returning final/ branch as the leader's final-build session;

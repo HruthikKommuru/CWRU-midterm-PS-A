@@ -9,4 +9,4 @@ Overall: n/a
 Strength: Made a clear source decision (trust voice note, flag the flyer).
 Improve: Read the inputs and edit the draft yourself before submitting.
 Session: joined 2026-10-22T22:33:06Z; 30-minute reminder no; 40-minute reminder no
-Source check: unable to answer ("I did not")
+Source check: first "I did not"; later pasted client_transcript.md and asked to confirm copy against it

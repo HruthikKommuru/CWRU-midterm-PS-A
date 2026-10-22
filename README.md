@@ -40,13 +40,13 @@ Use only files in inputs/. Prove your answer is right.
 
 ## Timeline (90 minutes)
 
-| Minutes | Work |
-| --- | --- |
-| 0–10 | Read and make branches. |
-| 10–50 | Do your role. |
-| 50–60 | Merge. |
-| 60–80 | Leader builds `final/`; team reviews. |
-| 80–90 | Rehearse. |
+Before the clock (if you can): fork, clone, open Codex.
+
+- 0-5 read the brief and join your role
+- 5-45 do your role (say "done" by minute 45)
+- 45-55 everyone merges
+- 55-80 leader builds final/, team reviews
+- 80-90 rehearse the 5-minute talk
 
 ## Final hand-in
 
